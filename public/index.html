@@ -3,27 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Copilot App</title>
+    <meta
+      name="description"
+      content="RangSutra celebrates the beauty, diversity, and history of incredible Indian art forms."
+    />
+    <title>RangSutra – Discover the Beauty of Indian Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="hero">
-        <span class="eyebrow">Workspace initialized</span>
-        <h1>GitHub Copilot App</h1>
-        <p>
-          This starter app is ready to use as a foundation for your next project.
-        </p>
-        <div class="actions">
-          <button id="healthButton">Check app health</button>
+    <header class="site-header">
+      <nav class="nav container">
+        <div class="brand" aria-label="RangSutra home">
+          <span class="brand-mark">R</span>
+          <span>RangSutra</span>
+        </div>
+        <div class="nav-links">
+          <a href="#journey">Journey</a>
+          <a href="#discover">Art Forms</a>
+          <a href="#heritage">Heritage</a>
+        </div>
+        <a class="nav-cta" href="#discover">Explore</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Discover living traditions</p>
+          <h1>RangSutra – Discover the Beauty of Indian Art.</h1>
+          <p class="lead">
+            A celebration of India’s vivid storytelling, sacred geometry, folk rituals,
+            and timeless creativity — from the painted walls of Mithila to the golden
+            glow of Thanjavur.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#discover">Explore art forms</a>
+            <a class="secondary-btn" href="#journey">Read the legacy</a>
+          </div>
+
+          <div class="stats" aria-label="Key art form statistics">
+            <div>
+              <strong>10</strong>
+              <span>Iconic forms</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>States celebrated</span>
+            </div>
+            <div>
+              <strong>2000+</strong>
+              <span>Years of heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Featured Indian art image">
+          <div class="visual-card">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+              alt="Traditional Indian art and craftsmanship"
+            />
+            <div class="floating-note">
+              <span>Featured art form</span>
+              <strong>Madhubani</strong>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="panel">
-        <h2>Application status</h2>
-        <p id="statusText">Waiting for a health check...</p>
+      <section id="discover" class="discover container">
+        <div class="section-heading">
+          <p class="eyebrow section-eyebrow">Art forms of India</p>
+          <h2>Celebrating colour, craft, and cultural memory</h2>
+        </div>
+
+        <div id="filterGroup" class="filter-group" aria-label="Filter art forms">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="Painting">Painting</button>
+          <button class="chip" data-filter="Tribal Art">Tribal Art</button>
+          <button class="chip" data-filter="Textile Art">Textile Art</button>
+          <button class="chip" data-filter="Folk Art">Folk Art</button>
+          <button class="chip" data-filter="Temple Art">Temple Art</button>
+        </div>
+
+        <div id="artGrid" class="art-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="journey" class="story container">
+        <div class="story-copy">
+          <p class="eyebrow section-eyebrow">The journey</p>
+          <h2>Where faith, nature, and community meet</h2>
+          <p>
+            Indian art is not just decorative; it is a living archive of memory. It
+            preserves stories of harvests, gods, riverbanks, rituals, and everyday life.
+            Through centuries of patronage and community practice, these forms have woven
+            together faith, identity, and creativity into one vibrant cultural fabric.
+          </p>
+        </div>
+
+        <div id="heritage" class="story-cards">
+          <article>
+            <span>01</span>
+            <h3>Heritage</h3>
+            <p>Rooted in temples, villages, courts, and homes across India.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Storytelling</h3>
+            <p>Every motif, line, and colour carries folklore, ritual, and memory.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Craftsmanship</h3>
+            <p>From natural pigments to intricate weaving, each form celebrates skill.</p>
+          </article>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>RangSutra</p>
+        <p>Celebrating the soul of Indian art.</p>
+      </div>
+    </footer>
 
     <script src="/app.js"></script>
   </body>
